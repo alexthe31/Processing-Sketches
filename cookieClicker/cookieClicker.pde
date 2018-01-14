@@ -16,10 +16,14 @@ fill(180,111,5);
   text(cookies + " Cookies",250, 600);
   fill(238, 93, 93);
 ellipse(525,131,20,20);
+
+if(mousePressed){
+println("X: " + mouseX + " Y: " + mouseY); 
+}
+ if(mousePressed && (mouseX < 401 && mouseX > 197) && (mouseY < 503 && mouseY > 301)){
+  cookies+=1;
+    }
+
 }
 
-void mouseClicked(){
-cookies+=1;
-
-}
-
+   
