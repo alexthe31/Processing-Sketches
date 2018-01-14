@@ -5,7 +5,7 @@ void setup() {
       size( 1030 ,770);
       image(waldo, 0, 0);
 doh = minim.loadSample("/Users/League/Google Drive/league-sounds/homer-doh.wav");
-woohoo = minim.loadSample("334014__17lijo__goodjob");
+woohoo = minim.loadSample("334014__17lijo__goodjob.mp3");
 }
 void draw() {
 
@@ -16,10 +16,11 @@ void draw() {
 if(mousePressed){
     if((mouseX > 172 && mouseX < 185) && (mouseY < 176 && mouseY > 156 )){
       println("good");
-playwoohoo();
-    }
+playWoohoo();
+    }else if(mousePressed){
+      playDoh();
 } 
-  
+} 
 }      // 8. If Waldo is found, also use the method below to play “Woohoo”
 
       // 9. If the mouse is pressed and they’re not on Waldo, play “Doh”
