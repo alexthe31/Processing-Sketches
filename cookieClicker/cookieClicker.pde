@@ -1,10 +1,17 @@
 int cookies = 0;
+boolean togglemenu;
 void setup(){
   size(600,800);
 }
 void draw(){
   background(255);
   noStroke();
+  if(mousePressed && (mouseX < 534 && mouseX > 515) && (mouseY < 140  && mouseY > 123)){
+    togglemenu=!togglemenu;
+  }
+  if(togglemenu==true){
+    minimenu();
+  }
 fill(180,111,5);
   ellipse(300,400,200,200);
   fill(82, 50, 1);
@@ -17,13 +24,18 @@ fill(180,111,5);
   fill(238, 93, 93);
 ellipse(525,131,20,20);
 
-if(mousePressed){
-println("X: " + mouseX + " Y: " + mouseY); 
-}
+rect(420,200,170,20);
  if(mousePressed && (mouseX < 401 && mouseX > 197) && (mouseY < 503 && mouseY > 301)){
   cookies+=1;
     }
 
 }
 
-   
+void minimenu(){ 
+  
+  rect(420,150,170,400);
+  
+}
+ 
+ 
+  
